@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <style>
+                body {font-family: Arial, Helvetica, sans-serif;}
+                
+                #myImg {
+                  border-radius: 5px;
+                  cursor: pointer;
+                  transition: 0.3s;
+                }
+                .myImg {
+                  border-radius: 5px;
+                  cursor: pointer;
+                  transition: 0.3s;
+                }
+                /* The Modal (background) */
+                .modal {
+                  display: none; /* Hidden by default */
+                  position: fixed; /* Stay in place */
+                  z-index: 1; /* Sit on top */
+                  padding-top: 100px; /* Location of the box */
+                  left: 0;
+                  top: 0;
+                  width: 100%; /* Full width */
+                  height: 100%; /* Full height */
+                  overflow: auto; /* Enable scroll if needed */
+                  background-color: rgb(0,0,0); /* Fallback color */
+                  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+                }
+                
+                /* Modal Content (image) */
+                .modal-content {
+                  margin: auto;
+                  display: block;
+                  width: 80%;
+                  max-width: 700px;
+                }
+                
+                /* Caption of Modal Image */
+                #caption {
+                  margin: auto;
+                  display: block;
+                  width: 80%;
+                  max-width: 700px;
+                  text-align: center;
+                  color: #ccc;
+                  padding: 10px 0;
+                  height: 150px;
+                }
+                
+                /* Add Animation */
+                .modal-content, #caption {  
+                  -webkit-animation-name: zoom;
+                  -webkit-animation-duration: 0.6s;
+                  animation-name: zoom;
+                  animation-duration: 0.6s;
+                }
+                
+                @-webkit-keyframes zoom {
+                  from {-webkit-transform:scale(0)} 
+                  to {-webkit-transform:scale(1)}
+                }
+                
+                @keyframes zoom {
+                  from {transform:scale(0)} 
+                  to {transform:scale(1)}
+                }
+                
+                /* The Close Button */
+                .close {
+                  position: absolute;
+                  top: 15px;
+                  right: 35px;
+                  color: #f1f1f1;
+                  font-size: 40px;
+                  font-weight: bold;
+                  transition: 0.3s;
+                }
+                
+                .close:hover,
+                .close:focus {
+                  color: #bbb;
+                  text-decoration: none;
+                  cursor: pointer;
+                }
+                
+                /* 100% Image Width on Smaller Screens */
+                @media only screen and (max-width: 700px){
+                  .modal-content {
+                    width: 100%;
+                  }
+                }
+                </style>
+    <meta charset="UTF-8">
+    <title class="fas fa-facebook">facebook</title>
+    <link href="style.css" rel="stylesheet" />
+    <link href="fontawesome-free-5.11.2-web/css/fontawesome.css" rel="stylesheet">
+    <link href="fontawesome-free-5.11.2-web/css/brands.css" rel="stylesheet">
+    <link href="fontawesome-free-5.11.2-web/css/solid.css" rel="stylesheet">
+    <script type="text/javascript" src="jquery-1.3.2.min.js">
+    </script>
+    <script src="style.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#chat").click(function () {
+                // alert("asd");
+                $("#chatting").slideToggle(500);
+            });
+        });
+    </script>
+</head>
+
+<body onload="advs()">
+
+    <!--This is the Starting of THe Header-->
+    <div id="header">
+        <div id="logo">
+            <p>facebook</p>
+        </div>
+        <div id="nav">
+            <div id="nv">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-newspaper" style="color:beige;"></i>
+                            Create
+                        </a>
+
+                    </li>
+                    <li><a href="#">
+                            <i class="fas fa-tv" style="color:beige;"></i>
+                            Home
+                        </a></li>
+                    <li style="border-right: 1.2px solid gray;padding-right:3%; ">
+                        <a href="#">
+                            <i class="fa fa-globe" style="color: beige;"></i>
+                            notifications
+                        </a></li>
+                    <li><a href="profile.html"><span id="ss"></span><img src="images/one.PNG" id="imgg" /></a></li>
+
+                </ul>
+            </div>
+            <div id="search">
+                <form>
+                    <i class="fas fa-search" style="color:white;"></i><input type="text" name="search"
+                        placeholder="Search....">
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <!--This is the Ending of THe Header-->
+
+    <!--This is the Starting of THe Content-->
+    <div id="content">
+
+        <div class="chat-sidebar">
+            <button id="chat">Chatting</button>
+            <div id="chatting">
+
+                <div class="sidebar-name">
+                    <!-- Pass username and display name to register popup -->
+                    <a href="javascript:register_popup('account0', 'mokhtar hashim');">
+                        <!--register_popup(id, name)  -->
+                        <span>mokhtar hashim &nbsp;&nbsp;</span>
+                        <img width="30" height="30" src="./images/two.png" />
+                    </a>
+                </div>
+                <div class="sidebar-name">
+                    <a href="javascript:register_popup('account1', 'abanoub fareed');">
+                        <span>abanoub fareed &nbsp;&nbsp;</span>
+                        <img width="30" height="30" src="./images/one.png" />
+                    </a>
+                </div>
+                <div class="sidebar-name">
+                    <a href="javascript:register_popup('account2', 'mohamed roshdy');">
+                        <span>mohamed roshdy&nbsp;</span>
+                        <img width="30" height="30" src="./images/three.png" />
+                    </a>
+                </div>
+                <div class="sidebar-name">
+                    <a href="javascript:register_popup('account3', 'ahmed ammar');">
+                        <span>ahmmed ammar&nbsp;&nbsp;&nbsp;</span>
+                        <img width="30" height="30" src="./images/one.png" />
+                    </a>
+                </div>
+                <div class="sidebar-name">
+                    <a href="javascript:register_popup('account4', 'mahmoud fouly');">
+                        <span>mahmoud fouly&nbsp;&nbsp;</span>
+                        <img width="30" height="30" src="./images/four.png" />
+                    </a>
+                </div>
+                <div class="sidebar-name">
+                    <a href="javascript:register_popup('account5', 'safy mohamd');">
+                        <span> safy mohamed&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        <img width="30" height="30" src="./images/two.png" />
+                    </a>
+                </div>
+                <div class="sidebar-name">
+                    <a href="javascript:register_popup('account6', 'mahmoud nasr');">
+                        <span>mahmoud nasr&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        <img width="30" height="30" src="./images/one.png" />
+                    </a>
+                </div>
+                <div class="sidebar-name">
+                    <a href="javascript:register_popup('account7', 'mohamed roshdy');">
+                        <span>mohamed roshdy&nbsp;</span>
+                        <img width="30" height="30" src="./images/three.png" />
+                    </a>
+                </div>
+
+                <div class="sidebar-name">
+                    <a href="javascript:register_popup('account8', 'abanoub fareed');">
+                        <span>abanoub fareed &nbsp;&nbsp;</span>
+                        <img width="30" height="30" src="./images/one.png" />
+                    </a>
+                </div>
+                <div class="sidebar-name">
+                    <a href="javascript:register_popup('account9', 'abanoub fareed');">
+                        <span>abanoub fareed &nbsp;&nbsp;</span>
+                        <img width="30" height="30" src="./images/four.png" />
+                    </a>
+                </div>
+                <div class="sidebar-name">
+                    <a href="javascript:register_popup('account10', 'mokhtar hashim');">
+                        <span>mokhtar hashim &nbsp;&nbsp;</span>
+                        <img width="30" height="30" src="./images/two.png" />
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="advertisment">
+
+            <h3>advertisments</h3>
+            <table>
+                <tr>
+                    <td><img src="images/1.jpg" id="ad1" /></td>
+                    <td><img src="images/2.jpg" id="ad2" /></td>
+                </tr>
+                <tr>
+                    <td><span name="ad_name"></span></td>
+                    <td><span name="ad_name"></span></td>
+                </tr>
+                <tr>
+                    <td><img src="images/3.jpg" id="ad3" /></td>
+                    <td><img src="images/5.jpg" id="ad4" /></td>
+                </tr>
+                <tr>
+                    <td><span name="ad_name"></span></td>
+                    <td><span name="ad_name"></span></td>
+                </tr>
+            </table>
+
+        </div>
+        <!--
+        <div id="side2">
+         
+                <div id="new_post">
+                    <div id="add_post">
+                        <h3>Add post</h3>
+                     <textarea   rows="5" id="text_area" >
+                         Say,something..?
+                     </textarea>
+                     <table>
+                         <tr>
+                             <td><input type="file" id="photo"  name="photo" value="add_photo" /></td>
+                             <td><input type="button" onclick="add_post()" value="post" /></td>
+                         </tr>
+                     </table>
+                    
+                    </div>
+                </div>
+               <span id="added_post">
+                   
+                </span>
+            -->
+         
+        <div id="side2">
+            <div style="width:100%;margin:1%1%1%1%">
+                <input type="file" id="brwose" style="display:inline">
+            <button onclick="post()" style="display:inline">post</button><br />
+            <textarea id="post" placeholder="بماذا  تفكر" style="width:80%;height:50px;"></textarea>
+             </div>
+            <div id="status">
+            <button onclick="clidernextphoto()" style="display:inline;">&#60</button>
+            <button onclick="cliderprevousphoto()" style="display:inline;">&#62</button>
+            <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    
+                    <img class="modal-content" id="img01">
+                    <div id="caption"></div>
+                  </div>
+            <div id="divforimges">
+                <img  src="55.jpg" class="myImg" onclick="clickbigphoto(this)"  style="width:16%;height:120px;opacity:.5" onmouseover="icreazeopacty(this)"
+                    onmouseout="decrezeopacty(this)">
+                <img src="33.jpg" class="myImg" onclick="clickbigphoto(this)" style="width:16%;height:120px;opacity:.5" onmouseover="icreazeopacty(this)"
+                    onmouseout="decrezeopacty(this)">
+                <img src="77.jpg" class="myImg" onclick="clickbigphoto(this)" style="width:16%;height:120px;opacity:.5" onmouseover="icreazeopacty(this)"
+                    onmouseout="decrezeopacty(this)">
+                <img src="88.jpg" class="myImg" onclick="clickbigphoto(this)" style="width:16%;height:120px;opacity:.5" onmouseover="icreazeopacty(this)"
+                    onmouseout="decrezeopacty(this)">
+                <img src="33.jpg"onclick="clickbigphoto(this)" class="myImg"style="width:16%;height:120px;opacity:.5" onmouseover="icreazeopacty(this)"
+                    onmouseout="decrezeopacty(this)">
+                <img src="77.jpg" onclick="clickbigphoto(this)"  class="myImg" style="width:16%;height:120px;opacity:.5" onmouseover="icreazeopacty(this)"
+                    onmouseout="decrezeopacty(this)">
+            </div>
+        </div>
+            <div id="friend_req">
+                <div style="width:15%;height:70px;margin:0px 10px 10px 10px;float:left">
+                    <button onclick="clidernextt()" style="display:inline;margin:65% 0% 0% 0%">&#60</button>
+                </div>
+                <div id="slider">
+                    <div id="userdiv1" style="width:15%;height:70px;margin:2% 2% 2% 2%;float:left">
+                        <img src="images/one.PNG" />
+                        <p>abanoub</p>
+                        <button style="display:inline">add</button>
+                        <button style="display:inline">remove</button>
+
+                    </div>
+                    <div id="userdiv2" style="width:15%;height:70px;margin:2% 2% 2% 2%;float:left">
+                        <img src="images/two.PNG" />
+                        <p>mokthar</p>
+                        <button style="display:inline">add</button>
+                        <button style="display:inline">remove</button>
+
+                    </div>
+                    <div id="userdiv3" style="width:15%;height:100px;margin:2% 2% 2% 2%;float:left">
+                        <img src="images/three.PNG" />
+                        <p>mariem</p>
+                        <button style="display:inline">add</button>
+                        <button style="display:inline">remove</button>
+                    </div>
+                </div>
+                <div >
+                        <button onclick="cliderprevouss()" style="display:inline;margin:10% 0% 0% 0%"> &#62</button>
+                    </div>
+            </div>
+                
+            
+            <span id="posthere">
+            </span>
+
+            <div class="post" style="clear:both">
+                <div class="owner"><a href="profile.html"><img src="images/one.PNG" /><br><span>Account1</span></a>
+                </div>
+                <div class="data">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                    <p>when an unknown printer took a galley of type and scrambled it to make a type </p>
+                    <p>specimen book. It has survived not only five centuries, but also the leap into</p>
+                </div>
+
+                <div class="comment">
+                    <ul>
+                        <li><span>share&nbsp;<i class="fas fa-sync-alt"></i></span></li>
+                        <li><span onclick="add_comment(0)">comment&nbsp;<i class="fas fa-comment-dots"></i></span></li>
+                        <li><span>like&nbsp;<i class="fas fa-thumbs-up" style="color:steelblue;"></i></span></li>
+                    </ul>
+                </div>
+                <input type="text" name="write" placeholder="write..." /><input type="button" onclick="wrote(0)" id="ok"
+                    value="ok">
+                <span name="comments"></span>
+
+            </div>
+
+            <div class="post">
+                <div class="owner"><a href="profile.html"><img src="images/two.PNG" /><br><span>Account2</span></a>
+                </div>
+                <div class="data">
+                    <p>بسم الله الرحمن الرحيم</p>
+                    <p>قل هو الله احد الله الصمد لم يلد ولم يولد ولم يكن له كفوا احد</p>
+                    <p>صدق الله العظيم</p>
+                </div>
+                <div class="comment">
+                    <ul>
+                        <li><span>share&nbsp;<i class="fas fa-sync-alt"></i></span></li>
+                        <li><span onclick="add_comment(1)">comment&nbsp;<i class="fas fa-comment-dots"></i></span></li>
+                        <li><span>like&nbsp;<i class="fas fa-thumbs-up" style="color:steelblue;"></i></span></li>
+                    </ul>
+                </div>
+                <input type="text" name="write" placeholder="write..." /><input type="button" onclick="wrote(1)" id="ok"
+                    value="ok">
+                <span name="comments"></span>
+            </div>
+            <div class="post">
+                <div class="owner"><a href="profile.html"><img src="images/three.PNG" /><br><span>Account3</span></a>
+                </div>
+                <div class="data">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                    <p>when an unknown printer took a galley of type and scrambled it to make a type </p>
+                    <p>specimen book. It has survived not only five centuries, but also the leap into</p>
+                </div>
+                <div class="comment">
+                    <ul>
+                        <li><span>share&nbsp;<i class="fas fa-sync-alt"></i></span></li>
+                        <li><span onclick="add_comment(2)">comment&nbsp;<i class="fas fa-comment-dots"></i></span></li>
+                        <li><span>like&nbsp;<i class="fas fa-thumbs-up" style="color:steelblue;"></i></span></li>
+                    </ul>
+                </div>
+                <input type="text" name="write" placeholder="write..." /><input type="button" onclick="wrote(2)" id="ok"
+                    value="ok">
+                <span name="comments"></span>
+            </div>
+            <div class="post">
+                <div class="owner"><a href="profile.html"><img src="images/four.PNG" /><br><span>Account4</span></a>
+                </div>
+                <div class="data">
+                    <div class="data">
+                        <p>#FCI_Fun_Day</p>
+                        <img src="images/33.jpg">
+                    </div>
+                </div>
+                <div class="comment">
+                    <ul>
+                        <li><span>share&nbsp;<i class="fas fa-sync-alt"></i></span></li>
+                        <li><span onclick="add_comment(3)">comment&nbsp;<i class="fas fa-comment-dots"></i></span></li>
+                        <li><span>like&nbsp;<i class="fas fa-thumbs-up" style="color:steelblue;"></i></span></li>
+                    </ul>
+                </div>
+                <input type="text" name="write" placeholder="write..." /><input type="button" onclick="wrote(3)" id="ok"
+                    value="ok">
+                <span name="comments"></span>
+            </div>
+            <div class="post">
+                <div class="owner"><a href="profile.html"><img src="images/one.PNG" /><br><span>Account5</span></a>
+                </div>
+                <div class="data">
+                    <div class="data">
+
+                        <img src="images/55.jpg">
+                    </div>
+                </div>
+                <div class="comment">
+                    <ul>
+                        <li><span>share&nbsp;<i class="fas fa-sync-alt"></i></span></li>
+                        <li><span onclick="add_comment(4)">comment&nbsp;<i class="fas fa-comment-dots"></i></span></li>
+                        <li><span>like&nbsp;<i class="fas fa-thumbs-up" style="color:steelblue;"></i></span></li>
+                    </ul>
+                </div>
+                <input type="text" name="write" placeholder="write..." /><input type="button" onclick="wrote(4)" id="ok"
+                    value="ok">
+                <span name="comments"></span>
+            </div>
+            <div class="post">
+                <div class="owner"><a href="profile.html"><img src="images/one.PNG" /><br><span>Account6</span></a>
+                </div>
+                <div class="data">
+                    <div class="data">
+
+                        <img src="images/77.jpg">
+                    </div>
+                </div>
+                <div class="comment">
+                    <ul>
+                        <li><span>share&nbsp;<i class="fas fa-sync-alt"></i></span></li>
+                        <li><span onclick="add_comment(5)">comment&nbsp;<i class="fas fa-comment-dots"></i></span></li>
+                        <li><span>like&nbsp;<i class="fas fa-thumbs-up" style="color:steelblue;"></i></span></li>
+                    </ul>
+                </div>
+                <input type="text" name="write" placeholder="write..." /><input type="button" onclick="wrote(5)" id="ok"
+                    value="ok">
+                <span name="comments"></span>
+            </div>
+            <div class="post">
+                <div class="owner"><a href="profile.html"><img src="images/one.PNG" /><br><span>Account7</span></a>
+                </div>
+                <div class="data">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                    <p>when an unknown printer took a galley of type and scrambled it to make a type </p>
+                    <p>specimen book. It has survived not only five centuries, but also the leap into</p>
+                    <p> electronic typesetting, remaining essentially unchanged. It was popularised in the</p>
+                    <p> 1960s with the release of Letraset sheets containing Lorem Ipsum passages, </p>
+                    <p>and more recently with desktop publishing software like Aldus PageMaker including versions of
+                        Lorem Ipsum</p>
+                </div>
+                <div class="comment">
+                    <ul>
+                        <li><span>share&nbsp;<i class="fas fa-sync-alt"></i></span></li>
+                        <li><span onclick="add_comment(6)">comment&nbsp;<i class="fas fa-comment-dots"></i></span></li>
+                        <li><span>like&nbsp;<i class="fas fa-thumbs-up" style="color:steelblue;"></i></span></li>
+                    </ul>
+                </div>
+                <input type="text" name="write" placeholder="write..." /><input type="button" onclick="wrote(6)" id="ok"
+                    value="ok">
+                <span name="comments"></span>
+            </div>
+            <div class="post">
+                <div class="owner"><a href="profile.html"><img src="images/one.PNG" /><br><span>Account8</span></a>
+                </div>
+                <div class="data">
+                    <img src="images/88.jpg">
+                </div>
+
+                <div class="comment">
+                    <ul>
+                        <li><span>share&nbsp;<i class="fas fa-sync-alt"></i></span></li>
+                        <li><span onclick="add_comment(7)">comment&nbsp;<i class="fas fa-comment-dots"></i></span></li>
+                        <li><span>like&nbsp;<i class="fas fa-thumbs-up" style="color:steelblue;"></i></span></li>
+                    </ul>
+                </div>
+                <input type="text" name="write" placeholder="write..." /><input type="button" onclick="wrote(7)" id="ok"
+                    value="ok">
+                <span name="comments"></span>
+            </div>
+            <div class="post">
+                <div class="owner"><a href="profile.html"><img src="images/one.PNG" /><br><span>Account7</span></a>
+                </div>
+                <div class="data">
+                    <p>post post post........post.asfwfqwefwefefwefwefwefwefwef</p>
+                    <p>post post post........post.asfwfqwefwefefwefwefwefwefwef</p>
+                    <p>post post post........post.asfwfqwefwefefwefwefwefwefwef</p>
+                </div>
+                <div class="comment">
+                    <ul>
+                        <li><span>share&nbsp;<i class="fas fa-sync-alt"></i></span></li>
+                        <li><span onclick="add_comment(8)">comment&nbsp;<i class="fas fa-comment-dots"></i></span></li>
+                        <li><span>like&nbsp;<i class="fas fa-thumbs-up" style="color:steelblue;"></i></span></li>
+                    </ul>
+                </div>
+                <input type="text" name="write" placeholder="write..." /><input type="button" onclick="wrote(8)" id="ok"
+                    value="ok">
+                <span name="comments"></span>
+            </div>
+
+
+        </div>
+        <div id="side3">
+            <ul>
+                <li><a href="#">News1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fas fa-newspaper" style="color:royalblue;"></i></a></li>
+                <li><a href="#">Messenger&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fab fa-facebook-messenger" style="color:royalblue;"></i></a></li>
+                <li><a href="#">Watch&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fas fa-tv" style="color:royalblue;"></i></a></li>
+                <li><a href="#">Marketplace&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fas fa-tv" style="color:royalblue;"></i></a></li>
+                <li><a href="#">News2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fas fa-newspaper" style="color:royalblue;"></i></a></li>
+                <li><a href="#">Groups_FCI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fab fa-facebook-messenger" style="color:royalblue;"></i></a></li>
+                <li><a href="#">Watch&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fas fa-tv" style="color:royalblue;"></i></a></li>
+                <li><a href="#">Marketplace&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fas fa-tv" style="color:royalblue;"></i></a></li>
+                <li><a href="#">Comic_video&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-tv"
+                            style="color:royalblue;"></i></a></li>
+                <li><a href="#">News3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fas fa-newspaper" style="color:royalblue;"></i></a></li>
+                <li><a href="#">Messenger&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fab fa-facebook-messenger" style="color:royalblue;"></i></a></li>
+                <li><a href="#">Watch&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fas fa-tv" style="color:royalblue;"></i></a></li>
+                <li><a href="#">Marketplace&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fas fa-tv" style="color:royalblue;"></i></a></li>
+                <li><a href="#">FCI_Assiut&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fas fa-tv" style="color:royalblue;"></i></a></li>
+                <li><a href="#">News2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fas fa-newspaper" style="color:royalblue;"></i></a></li>
+                <li><a href="#">Messenger&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fab fa-facebook-messenger" style="color:royalblue;"></i></a></li>
+                <li><a href="#">Watch&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fas fa-tv" style="color:royalblue;"></i></a></li>
+                <li><a href="#">Marketplace&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fas fa-tv" style="color:royalblue;"></i></a></li>
+
+
+                <br><br><br><br>
+            </ul>
+        </div>
+    </div>
+    <script> 
+        var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+function  clickbigphoto(e){
+    img=e;
+  modal.style.display = "block";
+  modalImg.src = e.src;
+  captionText.innerHTML = this.alt;
+}
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+        
+        function post() {
+            
+            var ss = document.getElementById("brwose").value.split("\\");
+            var post = document.getElementById("post").value;
+            if(ss!=''){
+            document.getElementById("posthere").innerHTML += "<div class='post'><div class='owner'><a href='profile.html'><img src='images/one.PNG' /><br><span>Account1</span></a></div><div class='data'><pre>"
+                + post + "<br/><img  src=" + ss[2] + " style='width:100px;height:100px'>" +
+                "</pre></div><div class='comment'><ul><li><span>مشاركه&nbsp;<i class='fas fa-sync-alt'></i></span></li><li><span>تعليق&nbsp;<i class='fas fa-comment-dots'></i></span></li><li><span>اعجبني&nbsp;<i class='fas fa-thumbs-up' style='color:steelblue;'></i></span></li></ul></div></div>"
+             }else{
+            document.getElementById("posthere").innerHTML += "<div class='post'><div class='owner'><a href='profile.html'><img src='images/one.PNG' /><br><span>Account1</span></a></div><div class='data'><pre>"
+                + post + 
+                "</pre></div><div class='comment'><ul><li><span>مشاركه&nbsp;<i class='fas fa-sync-alt'></i></span></li><li><span>تعليق&nbsp;<i class='fas fa-comment-dots'></i></span></li><li><span>اعجبني&nbsp;<i class='fas fa-thumbs-up' style='color:steelblue;'></i></span></li></ul></div></div>"
+        }
+        alert("Your post is completed....");
+        document.getElementById("post").value="";
+    }
+        var strr = [];
+        strr[0] = '<div id="userdiv1" style="width:15%;height:70px;margin:10px 10px 10px 10px;float:left"><img src="images/one.PNG" /><p>abanoub</p><button style="display:inline">add</button><button style="display:inline">remove</button></div>';
+        strr[1] = '<div  id="userdiv1" style="width:15%;height:70px;margin:10px 10px 10px 10px;float:left"><img src="images/one.PNG"/><p>mokthar</p> <button style="display:inline">add</button><button style="display:inline">remove</button></div>'
+        strr[2] = '<div  id="userdiv1" style="width:15%;height:70px;margin:10px 10px 10px 10px;float:left"><img src="images/one.PNG"/><p>marem</p> <button style="display:inline">add</button><button style="display:inline">remove</button></div>'
+        strr[3] = '<div  id="userdiv1" style="width:15%;height:70px;margin:10px 10px 10px 10px;float:left"><img src="images/one.PNG"/><p>assma</p> <button style="display:inline">add</button><button style="display:inline">remove</button></div>'
+        strr[4] = '<div  id="userdiv1" style="width:15%;height:70px;margin:10px 10px 10px 10px;float:left"><img src="images/one.PNG"/><p>muada</p> <button style="display:inline">add</button><button style="display:inline">remove</button></div>'
+        strr[5] = '<div  id="userdiv1" style="width:15%;height:70px;margin:10px 10px 10px 10px;float:left"><img src="images/one.PNG"/><p>sally</p> <button style="display:inline">add</button><button style="display:inline">remove</button></div>'
+        strr[6] = '<div  id="userdiv1" style="width:15%;height:70px;margin:10px 10px 10px 10px;float:left"><img src="images/one.PNG"/><p>roshdy</p> <button style="display:inline">add</button><button style="display:inline">remove</button></div>'
+        strr[7] = '<div  id="userdiv1" style="width:15%;height:70px;margin:10px 10px 10px 10px;float:left"><img src="images/one.PNG"/><p>amar</p> <button style="display:inline">add</button><button style="display:inline">remove</button></div>'
+        var xx = 0;
+        function clidernextt() {
+            if (xx < 5) {
+                ++xx;
+                document.getElementById("slider").innerHTML = strr[2 + xx] + strr[1 + xx] + strr[0 + xx];
+
+            }
+            else xx = 0
+
+        }
+        function cliderprevouss() {
+            if (xx > 0) {
+                --xx;
+                document.getElementById("slider").innerHTML = strr[2 + xx] + strr[1 + xx] + strr[0 + xx];
+            }
+            else xx = 5;
+        }
+        var str2 = [];
+        str2[0] = '<img src="55.jpg"  class="myImg" onclick="clickbigphoto(this)" style="width:16%;height:120px;opacity:.5" onmouseover="icreazeopacty(this)" onmouseout="decrezeopacty(this)">'
+        str2[1] = '<img  src="33.jpg" class="myImg" onclick="clickbigphoto(this)" style="width:16%;height:120px;opacity:.5" onmouseover="icreazeopacty(this)" onmouseout="decrezeopacty(this)">'
+        str2[2] = '<img  src="77.jpg" class="myImg" onclick="clickbigphoto(this)" style="width:16%;height:120px;opacity:.5" onmouseover="icreazeopacty(this)" onmouseout="decrezeopacty(this)">'
+        str2[3] = '<img  src="88.jpg" class="myImg" onclick="clickbigphoto(this)" style="width:16%;height:120px;opacity:.5" onmouseover="icreazeopacty(this)" onmouseout="decrezeopacty(this)">'
+        str2[4] = '<img  src="33.jpg" class="myImg" onclick="clickbigphoto(this)" style="width:16%;height:120px;opacity:.5" onmouseover="icreazeopacty(this)" onmouseout="decrezeopacty(this)">'
+        str2[5] = '<img  src="77.jpg" class="myImg" onclick="clickbigphoto(this)" style="width:16%;height:120px;opacity:.5"  onmouseover="icreazeopacty(this)" onmouseout="decrezeopacty(this)">'
+        str2[6] = '<img src="55.jpg" class="myImg" onclick="clickbigphoto(this)" style="width:16%;height:120px;opacity:.5" onmouseover="icreazeopacty(this)" onmouseout="decrezeopacty(this)">'
+        str2[7] = '<img  src="33.jpg" class="myImg" onclick="clickbigphoto(this)" style="width:16%;height:120px;opacity:.5" onmouseover="icreazeopacty(this)" onmouseout="decrezeopacty(this)">'
+        str2[8] = '<img  src="77.jpg" class="myImg" onclick="clickbigphoto(this)" style="width:16%;height:120px;opacity:.5"  onmouseover="icreazeopacty(this)" onmouseout="decrezeopacty(this)">'
+        str2[9] = '<img  src="88.jpg" class="myImg" onclick="clickbigphoto(this)" style="width:16%;height:120px;opacity:.5" onmouseover="icreazeopacty(this)" onmouseout="decrezeopacty(this)">'
+        str2[10] = '<img  src="33.jpg" class="myImg" onclick="clickbigphoto(this)" style="width:16%;height:120px;opacity:.5" onmouseover="icreazeopacty(this)" onmouseout="decrezeopacty(this)">'
+        str2[11] = '<img  src="77.jpg" class="myImg" onclick="clickbigphoto(this)" style="width:16%;height:120px;opacity:.5" onmouseover="icreazeopacty(this)" onmouseout="decrezeopacty(this)">'
+        var s = 0;
+        function clidernextphoto() {
+            if (s < 6) {
+                ++s;
+                document.getElementById("divforimges").innerHTML = str2[5 + s] + str2[4 + s] + str2[3 + s] + str2[2 + s] + str2[1 + s] + str2[0 + s];
+
+            }
+            else s = 0
+
+        }
+        function cliderprevousphoto() {
+            if (s > 0) {
+                --s;
+                document.getElementById("divforimges").innerHTML = str2[5 + s] + str2[4 + s] + str2[3 + s] + str2[2 + s] + str2[1 + s] + str2[0 + s];
+            }
+            else s = 6;
+        }
+        /*      
+               function add_post()
+               {
+                   var x=document.getElementById("text_area").value;
+                   var account="<div class='owner'><a href='profile.html'><img src='images/one.PNG' /><br><span>Account1</span></a></div>"
+                   var str="<div class='comment'><ul><li><span>share&nbsp;<i class='fas fa-sync-alt'></i></span></li><li><span onclick='add_comment()'>comment&nbsp;<i class='fas fa-comment-dots'></i></span></li><li><span>like&nbsp;<i class='fas fa-thumbs-up' style='color:steelblue;'></i></span></li></ul></div><input type='text' id='write'  placeholder='write...' /><input type='button' onclick='wrote()' id='ok' value='ok'><span id='comments'></span>";
+      
+                      if(x.length <3)
+                      {
+                          alert("Please Enter Your Post");
+                      }
+                      else
+                      {
+                          document.getElementById("added_post").innerHTML+="<div name='added' class='post'>"+account+x+str+"</div>";
+                      }
+               }
+      */
+       // Get the modal
+
+
+        function advs() {
+            var arr = [];
+            arr[0] = "images/3.jpg";
+            arr[1] = "images/4.jpg";
+            arr[2] = "images/5.jpg";
+            arr[3] = "images/6.jpg";
+            arr[4] = "images/7.jpg";
+            arr[5] = "images/8.jpg";
+            arr[6] = "images/1.jpg";
+            arr[7] = "images/2.jpg";
+            arr[8] = "images/5.jpg";
+            arr[9] = "images/3.jpg";
+
+            var names = [];
+            names[0] = "adv1";
+            names[1] = "adv2";
+            names[2] = "adv3";
+            names[3] = "adv4";
+            names[4] = "adv5";
+            names[5] = "adv6";
+            names[6] = "adv7";
+            names[7] = "adv8";
+            names[8] = "adv9";
+            names[9] = "adv10";
+
+
+            setInterval(function () {
+
+                var i = Math.floor(Math.random() * 10);
+                if (i == 10)
+                    i = 9;
+                document.getElementById("ad1").src = arr[i];
+                var j = Math.floor(Math.random() * 10);
+                if (j == 10)
+                    j = 5;
+                document.getElementById("ad2").src = arr[j];
+
+                var k = Math.floor(Math.random() * 10);
+                if (k == 10)
+                    k = 4;
+                document.getElementById("ad3").src = arr[k];
+
+                var l = Math.floor(Math.random() * 10);
+                if (l == 10)
+                    l = 2;
+                document.getElementById("ad4").src = arr[l];
+
+                document.getElementsByName("ad_name")[0].innerHTML = names[i];
+                document.getElementsByName("ad_name")[1].innerHTML = names[j];
+                document.getElementsByName("ad_name")[2].innerHTML = names[k];
+                document.getElementsByName("ad_name")[3].innerHTML = names[l];
+
+            }, 3000)
+        }
+
+        function wrote(y) {
+
+            var str = "<p>" + document.getElementsByName("write")[y].value + "</p>";
+            document.getElementsByName("comments")[y].innerHTML += str;
+
+            document.getElementsByName("write")[y].value = "";
+
+        }
+
+        function icreazeopacty(e) {
+            e.style.opacity = 1;
+        }
+        function decrezeopacty(e) {
+            e.style.opacity = .5;
+        }
+        function add_comment(x) {
+            document.getElementsByName("write")[x].focus();
+        }
+        str = location.search;
+        arr = str.split('&');
+        arr1 = arr[0].split('=');
+        var index;
+        for (let i = 0; i < accounts.data.length; i++) {
+            if (accounts.data[i].name == arr1[1]) {
+                index = i;
+            }
+        }
+
+        localStorage.user = accounts.data[index].name;
+        localStorage.image = accounts.data[index].img;
+        document.getElementById("ss").innerHTML = localStorage.user;
+        document.getElementById("imgg").src = localStorage.image;
+
+
+    </script>
+</body>
+<script src="myScript-mariam.js">
+</script>
+
+</html>

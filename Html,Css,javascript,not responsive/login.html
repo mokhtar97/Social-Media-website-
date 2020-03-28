@@ -1,0 +1,126 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title class="fas fa-facebook">facebook</title>
+    <link  href="login.css" rel="stylesheet" />
+    <link href="fontawesome-free-5.11.2-web/css/fontawesome.css" rel="stylesheet">
+    <link href="fontawesome-free-5.11.2-web/css/brands.css" rel="stylesheet">
+    <link href="fontawesome-free-5.11.2-web/css/solid.css" rel="stylesheet">
+     <script src="style.js"></script>
+</head>
+
+<body>
+
+    <div id="header">
+        <div id="logo">  
+            <p>facebook</p>
+        </div>
+        <div id="nav"> 
+           <form method="GET" action="index.html" onsubmit="check()">
+               <table>
+                   <tr>
+                       <td>email or phone:</td>
+                       <td><input type="text" name="name" id="name" placeholder="enter your name..."/></td>
+                       <td>password:</td>
+                       
+                       <td><input type="password" name="psd" id="psd" placeholder="enter your password..."></td>
+                       <td><input type="submit"  value="login"></td>
+                   </tr>
+               </table>
+           </form>
+         </div>
+    </div>
+
+    <div id="main">
+        <div id="register">
+                <form method="GET" onsubmit="validate()">
+            <table>
+             <h3 style=" font-size: 20px;">  &nbsp; &nbsp; &nbsp;Sign Up</h3>
+             <h4>&nbsp; &nbsp;it`s free and always will be.</h4>
+                <tr>
+                    <td><input type="text" name="fname" id="fname" onblur="func1()" placeholder="first name..." required /></td>
+                </tr>
+                <tr> 
+                    <td><input type="text" name="lname" id="lname" onblur="func2()" placeholder="last name..." required /></td>
+                </tr>
+                <tr> 
+                    <td><input type="email" name="email" id="email" placeholder="email..." required /></td>
+                </tr>
+
+                <tr>   
+                    <td><input type="text" name="add" id="add" placeholder="enter your address..."required /></td>
+                </tr> 
+
+                <tr>
+                    <td>Gender:</td>
+                </tr>
+                <tr> 
+                    <td><input type="radio" name="gender" id="male" value="male" /><label for="male">Male</label><br>
+                    <input type="radio" name="gender" id="femal" value="female" /><label for="femal">Female</label></td>
+                </tr>
+               
+                <tr>    
+                    <td><input type="date" name="dd" id="dd" required /></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" id="sub" value="Sign Up"/></td> 
+                </tr>
+            </table>
+        </form>
+       </div>
+       <div id="social">
+         <img src="social.png" />
+       </div>
+    </div>
+    <script>
+        document.getElementsByName("gender")[0].style.width=40;
+        document.getElementsByName("gender")[1].style.width=40;
+        var is_valid=1;
+        function func1()
+        {
+            if(document.getElementById("fname").value.length<3)
+            {
+                is_valid=0;
+            }
+        }
+
+        function func2()
+        {
+            if(document.getElementById("lname").value.length<3)
+            {
+                is_valid=0;
+            }
+        }
+        
+        function validate()
+        {
+            if(is_valid==0)
+            {
+                alert("error");
+                event.preventDefault();
+            }
+        }
+        
+         
+        function check()
+        {
+             var is_flag=0;
+            for(let i=0 ; i<accounts.data.length ; i++)
+            {
+               
+               if(document.getElementById("name").value==accounts.data[i].name && document.getElementById("psd").value==acconts.data[i].password)
+               {
+                   is_flag=1;
+               }
+            }
+            if(is_flag==0)
+            {
+                alert("Wrong ,Email or password");
+               event.preventDefault();
+            }
+          
+        }
+        </script>
+</body>
+</html>

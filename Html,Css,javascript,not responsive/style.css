@@ -1,0 +1,360 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: #dcdcdc;
+}
+#header{
+    background-color: #336699;
+    height:10%;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+}
+#logo{
+
+    width:40%;
+    float: left;
+    
+}
+#logo p{
+    color:white;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 3%;
+   
+}
+
+#nav{
+    float: left;
+    width:60%;
+    
+}
+
+#nv{
+    float:left;
+    width:60%;
+
+}
+#nav ul li{
+    list-style-type:none;
+    display: inline-block; 
+    padding-left: 2%;
+    
+  
+}
+
+#nav ul li a{
+    text-decoration: none;
+    color:white;
+    font-size: 15px;
+    font-weight: bold;
+}
+#nav ul li img{
+    width:25%;
+    border-radius: 50%;
+    
+  
+}
+#nav ul li a:hover{
+    background-color:rgba(0,0,0,0.5);
+    font-weight: bold;
+    border-radius: 10%;
+    
+}
+#search{
+    float: left;
+    margin-top: 4%;
+    width:40%;
+ 
+}
+#search input{
+    width:60%;
+}
+/*Ending------------------------*/
+#content{
+    text-align:center;
+    height: 4900px;
+    padding-top:4.79%;
+}
+
+#chat
+{
+    width:100%;
+    height: 5%;
+    margin-bottom: 3px;
+}
+#chat:hover
+{
+    background-color: #e1e2e5;
+}
+@media only screen and (max-width : 540px)   /* something for the responsive   */
+             
+            {
+                .chat-sidebar   
+                {
+                    display: none !important;
+                }
+                
+                .chat-popup
+                {
+                    display: none !important;
+                }
+            }
+            
+
+            
+            .chat-sidebar
+            {
+                width: 200px;
+                position: fixed;
+                height: 100%;
+                left: 0px;     
+                top: 65px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                border: 1px solid rgba(29, 49, 91, .3);
+            }
+            
+            .sidebar-name 
+            {
+                padding-left: 10%;
+                margin-top: 5%;
+                margin-bottom: 5%;
+                font-size: 12px;
+                width:90%;
+            }
+            
+            .sidebar-name span
+            {
+               padding-left: 3%;
+            }
+            
+            .sidebar-name a
+            {
+                display: block;
+                height: 100%;
+                text-decoration: none;
+                color: inherit;
+            }
+            
+            .sidebar-name:hover
+            {
+                background-color:silver;
+            }
+            
+            .sidebar-name img
+            {
+                width: 32px;
+                height: 32px;
+                vertical-align:middle;
+                border-radius: 50%;
+            }
+            
+            .popup-box
+            {
+                display: none;
+                position: fixed;
+                bottom: 0px;
+                left: 220px;
+                height: 285px;
+                background-color: rgb(237, 239, 244);
+                width: 300px;
+                border: 1px solid rgba(29, 49, 91, .3);
+            }
+            
+            .popup-box .popup-head
+            {
+                background-color: #6d84b4;
+                padding: 5px;
+                color: white;
+                font-weight: bold;
+                font-size: 14px;
+                clear: both;
+            }
+            
+            .popup-box .popup-head .popup-head-left
+            {
+                float: left;
+            }
+            
+            .popup-box .popup-head .popup-head-right
+            {
+                float: right;
+                opacity: 0.5;
+            }
+            
+            .popup-box .popup-head .popup-head-right a
+            {
+                text-decoration: none;
+                color: inherit;
+            }
+            
+            .popup-box .popup-messages
+            {
+                height: 100%;
+              /*  margin-top: 53px;*/
+                overflow-y: scroll;
+            }
+            .popup-box .popup-messages .send-box  
+            {
+                height: 20px;
+                width: 80%;
+                clear: both;
+                padding-bottom: 0px;
+               /* padding-left: 0px;
+                padding-right: 0px;*/
+            }
+            .popup-box .popup-messages .send-button
+            {
+
+                height: 22px;
+                width: 15%;
+                margin-top: 183px;
+               /* margin-left: 234px;*/
+
+            } 
+            
+#advertisment
+{
+    width:18%;
+    float: left;
+    margin-left: 15%;
+    margin-top: 2%;
+    padding-right: 1.5%;
+    background-color: white;
+   
+}
+
+#advertisment img
+{
+    width:90%;
+    padding-left: 15%;
+    float: left;
+    padding-top:10% ;
+}
+#side2{
+    width:45%;
+    float: left;
+}
+
+#new_post
+{
+    padding-top: 3%;
+    width: 100%;
+    height:10em;
+}
+
+#add_post
+{
+   width:98.8%;
+   float: left;
+   text-align: left;
+   
+}
+#add_post textarea
+{
+    width: 100%;
+}
+
+.post{
+    border:0.2px solid silver;
+    padding:3%;
+    margin-top:2%; 
+    background-color: white;
+
+}
+.owner{
+    text-align: left;
+}
+.owner img{
+    width:6%;
+    border-radius: 60%;
+    padding-top: 2%;
+    padding-right: 3.2%;
+    
+}
+.owner span{
+    padding-right: 2%;
+}
+.owner a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 130%;
+   
+}
+
+.data img{
+    width:70%;
+    height:50%;
+}
+.comment ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border:1px solid silver;
+    
+}
+
+.comment ul li{
+   
+    display: inline-block;
+    width: 120px;
+    font-weight: bold;
+    background-color: azure;
+    text-align: center;
+    padding: 1%;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-left: 7%;
+
+}
+
+.comment ul li:hover{
+   background-color: #d3d3d3;
+   color:white;
+   cursor: pointer;
+   
+}
+.comment ul li span{
+    color:gray;
+}
+#side3{
+    width:17%;
+    float: left;
+    position: fixed;
+    margin-left: 82%;
+    
+}
+#side3 ul li{
+    list-style-type:none;
+    padding-top:5%; 
+    padding-right: 15%;
+    
+}
+#side3 ul li a{
+    text-decoration: none;
+    color:black;
+}
+#side3 ul li a:hover{
+    background-color:silver;
+    height: 3.3em;
+    color:white;
+    border-radius: 15%;
+    width:100%;
+}
+#status
+{
+    background-color: white;
+    width:100%;
+    padding:3% ;
+    border-left: 5px solid #dcdcdc;
+}
+#friend_req
+{
+    background-color: white;
+    margin-top:2%;
+    height: 200px;
+    border-left: 5px solid #dcdcdc;
+}

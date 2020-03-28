@@ -1,0 +1,78 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color:whitesmoke;
+}
+#header{
+    background-color: #336699;
+    height:10%;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+}
+#logo{
+    width:40%;
+    float: left;
+}
+#logo p{
+    color:white;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 3%; 
+}
+#nav table
+{
+    color:white;
+    padding: 1.5%;
+    margin-left: 50%;
+}
+#nav input
+{
+    border-radius: 10%;
+}
+
+#register
+{
+    padding-top:5%;
+    width:40%;
+    float: left;
+   padding: 6%;
+}
+#register table
+{
+    padding: 6%;
+}
+#register table td
+{
+    padding: 0.5%;
+    width:35%;
+    font-size: 25px;
+}
+#register table td input
+{
+    font-size: 25px;
+    width:70%;
+}
+
+#register #sub
+{
+    width:30%;
+    float: left;
+    padding-left: 3%;
+    background-color: green;
+    color:white;
+}
+
+#social
+{
+    padding-top:6%;
+    float: left;
+    width:40%
+}
+#social img
+{
+    float: left;
+    padding: 3%;
+    width:100%;
+    height: 70%;
+}
